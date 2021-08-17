@@ -11,8 +11,8 @@ public class UserRepository {
     
     public UserRepository() {
         users = new HashMap<>();
-        users.put("rafael@email.com", new User("Rafael Lima", "rafael@email.com", "081995120734"));
-        users.put("bea@email.com", new User("Beatriz Delmiro", "bea@email.com", "081995678800"));
+        users.put("rafael@email.com", new User("Rafael Lima", "rafael@email.com", "034995425734"));
+        users.put("wayne@enterprise.com", new User("Bruce Wayne", "wayne@enterprise.com", "554995340001"));
     }
     
     public User getByEmail(String email) {
