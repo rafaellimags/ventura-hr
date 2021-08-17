@@ -1,5 +1,7 @@
 package br.edu.infnet.app.user;
 
+import br.edu.infnet.domain.user.User;
+import br.edu.infnet.infra.user.UserService;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -14,10 +16,12 @@ public class LoginServlet extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        
-        String inbox = "";
+        System.out.println("Entrou em process request!!!");
         String email = request.getRemoteUser();
-        request.setAttribute("email", email); // acessar o microserviço de usuario
+        UserService us = new UserService();
+        User user = us.getByEmail(email);
+        request.setAttribute("user", user);
+        String inbox = "";
         
         if(request.isUserInRole("company")) {
             inbox = "/company/index.jsp";

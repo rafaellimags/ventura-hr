@@ -6,8 +6,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>${ user.name }! </h1>
-        <h2>Seja bem vindo à area de recrutamento de candidatos.</h2>
-        <b>Data:</b> <%= new java.util.Date() %><br>
+        <h1>Olá ${ user.name }! </h1>
+        <h2>Seja bem vindo à area de candidatos</h2>
     </body>
 </html>
